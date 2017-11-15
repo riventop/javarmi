@@ -15,7 +15,7 @@ public class Server extends OrderServiceImpl{
          OrderService stub = (OrderService) UnicastRemoteObject.exportObject(obj,0);     
          // Binding the remote object (stub) in the registry         
          
-         Registry registry = LocateRegistry.getRegistry(); 
+         Registry registry = LocateRegistry.createRegistry(1222); 
          
                   
          registry.bind("Order", stub);

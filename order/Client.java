@@ -6,7 +6,7 @@ public class Client {
    public static void main(String[] args) {  
       try {  
          // Getting the registry 
-         Registry registry = LocateRegistry.getRegistry(null); 
+         Registry registry = LocateRegistry.getRegistry(1222); 
     
          // Looking up the registry for the remote object 
          OrderService stub = (OrderService) registry.lookup("Order"); 
